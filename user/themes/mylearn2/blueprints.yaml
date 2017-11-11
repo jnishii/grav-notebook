@@ -1,0 +1,61 @@
+name: MyLearn2
+version: 1.7.0
+description: "Customized Learn2 theme"
+icon: book
+author:
+  name: Jun Nishii
+  email: nishii@yamaguchi-u.ac.jp
+  url: http://bcl.sci.yamaguchi-u.ac.jp/~jun
+homepage: http://bcl.sci.yamaguchi-u.ac.jp/~jun
+demo: http://bcl.sci.yamaguchi-u.ac.jp/~jun/notebook
+keywords: heme, docs, modern, fast, responsive, html5, css3
+#bugs: https://github.com/getgrav/grav-theme-learn2/issues
+license: MIT
+
+form:
+  validation: loose
+  fields:
+    top_level_version:
+        type: toggle
+        label: Top Level Version
+        highlight: 1
+        default: 0
+        options:
+          1: Enabled
+          0: Disabled
+        validate:
+          type: bool
+
+    home_url:
+        type: text
+        label: Home URL
+        placeholder: http://bcl.sci.yamaguchi-u.ac.jp/~jun
+        validate:
+          type: text
+
+    google_analytics_code:
+        type: text
+        label: Google Analytics Code
+        placeholder: UA-48444845-1
+        validate:
+          type: text
+
+#    github.position:
+#        type: select
+#        size: medium
+#        classes: fancy
+#        label: GitHub Position
+#        options:
+#            top: Top
+#            bottom: Bottom
+#            off: Off
+
+#    github.tree:
+#        type: text
+#        label: GitHub Tree
+#        default: https://github.com/getgrav/grav-skeleton-rtfm-site/blob/develop/
+
+#    github.commits:
+#        type: text
+#        label: GitHub Commits
+#        default: https://github.com/getgrav/grav-skeleton-rtfm-site/commits/develop/

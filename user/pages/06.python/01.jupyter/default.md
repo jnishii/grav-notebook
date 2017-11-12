@@ -47,11 +47,11 @@ $ jupyter nbextension enable codefolding/main
 
 ## スライド対応にする
 
-いろいろあって，どれが良いかはまだよくわかりない。
+いろいろな方法がある。
 
 ### 方法1: そのまま
 
-メニュー「View/Cell Toolbar/Slideshow」を選択すると，各セルをスライドにするとか，表示しないとか選択できる。
+メニュー「View/Cell Toolbar/Slideshow」を選択すると，各セルをスライドにするとかしないとか選択できる。
 最後に以下でスライドモードで表示を行う。
 
 ```
@@ -61,10 +61,13 @@ $ jupyter nbconvert <file name>.ipynb --to slides --post serve
 ### 方法2: RISE
 
 [RISE](https://github.com/damianavila/RISE)を使う。
+お手軽に，そこそこに便利に使えるお勧めの方法。
 ```
 $ conda install -c damianavila82 rise
 ```
 jupyter notebook のメニューにスライド表示のボタンが出て，それをクリックすれば直ちにプレゼンを出来る。	
+プレゼン上でプログラムの実行もできる。
+どのセルをスライドにするかは，方法1と同様にして選択できる。
 
 
 ### 方法3: nbpresent
@@ -72,8 +75,12 @@ jupyter notebook のメニューにスライド表示のボタンが出て，そ
 スライド作成のいろいろな機能がある。
 ```
 conda install -c conda-forge nbpresent
-
 ```
+
+### 方法4: nbviewer
+GitHubにJupyter notebookをおけば，[Jupyter Notebook Viewer](http://nbviewer.jupyter.org)で表示できる。
+プレゼン形式にも出来る。
+
 
 ## Short Cut Key
 - コマンドモードで”h”を押すと一覧表示される

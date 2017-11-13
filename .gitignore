@@ -3,9 +3,12 @@
 composer.lock
 cache/*
 assets/*
+backup/*
 logs/*
 images/*
-user/data/*
+#user/data/*
+user/pages
+user/pages/*
 
 # OS Generated
 .DS_Store*
@@ -15,5 +18,5 @@ Thumbs.db
 *.swp
 
 # Jun's..
-.htaccess
 *~
+.*~

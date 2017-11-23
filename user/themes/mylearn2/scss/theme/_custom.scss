@@ -1,19 +1,34 @@
 @charset "UTF-8";
 
 // Your custom SCSS should be written here...
+// Body Base
 
-$core-font-size:                                1.0rem !default;
-$core-line-height:                              1.4 !default;
+$core-font-size:	1.0rem;
+$core-line-height:	1.4;
 
-// Heading Sizes
-$h1-font-size:                  $core-font-size + 0.00 !default;
-$h2-font-size:                  $core-font-size + 0.50 !default;
-$h3-font-size:                  $core-font-size + 1.10 !default;
-$h4-font-size:                  $core-font-size + 0.75 !default;
-$h5-font-size:                  $core-font-size + 0.35 !default;
-$h6-font-size:                  $core-font-size - 0.15 !default;
+body {
+   font-size: $core-font-size;
+   line-height: $core-line-height;
+}
 
-////////////
+h1 {
+	font-size: $core-font-size + 2.10;
+}
+
+h2 {
+	font-size: $core-font-size + 0.7;
+}
+
+h3 {
+	font-size: $core-font-size + 0.5;
+}
+
+h4 {
+	font-size: $core-font-size + 0.4;
+}
+
+
+
 //Fluidbox fixes
 .lightbox-active {
 	#body {
@@ -216,7 +231,7 @@ $h6-font-size:                  $core-font-size - 0.15 !default;
   background-color: $code-bg;
   margin-left: -.2rem;
   cursor: pointer;
-  border-radius: 0 2px 2px 0;
+  border-radius: 0 1px 1px 0;
 
   &:hover {
     background-color: darken($code-bg, 5%);

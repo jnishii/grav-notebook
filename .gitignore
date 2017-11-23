@@ -1,4 +1,5 @@
 # Grav Specific
+.htaccess
 .sass-cache
 composer.lock
 cache/*

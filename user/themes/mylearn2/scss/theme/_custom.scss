@@ -16,16 +16,19 @@ h1 {
 }
 
 h2 {
-	font-style: bold;
+	font-weight: bold;
 	font-size: $core-font-size + 0.7;
+	line-height: 1.0;
 }
 
 h3 {
-	font-size: $core-font-size + 0.5;
+	font-weight: bold;
+	font-size: $core-font-size + 0.3;
+	line-height: 1.0;
 }
 
 h4 {
-	font-size: $core-font-size + 0.4;
+	font-size: $core-font-size + 0.1;
 }
 
 //Fluidbox fixes

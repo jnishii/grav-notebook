@@ -1,2 +1,2 @@
 #!/bin/sh
-mkdir cache images logs backup assets
+mkdir cache logs backup assets

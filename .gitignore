@@ -6,7 +6,7 @@ cache/*
 assets/*
 backup/*
 logs/*
-images/*
+#images/*
 #user/data/*
 user/accounts/*
 user/pages

@@ -807,6 +807,17 @@ h3 {
 h4 {
   font-size: 1.1rem; }
 
+blockquote {
+  border-left: 6px solid #F0F2F4; }
+  blockquote p {
+    font-size: 1.0rem;
+    color: #666; }
+  blockquote cite {
+    display: block;
+    text-align: right;
+    color: #666;
+    font-size: 1.0rem; }
+
 .lightbox-active #body {
   overflow: visible; }
   .lightbox-active #body .padding {

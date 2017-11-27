@@ -31,6 +31,21 @@ h4 {
 	font-size: $core-font-size + 0.1;
 }
 
+// Blockquote
+blockquote {
+        border-left: 6px solid $rule-color;
+        p {
+                font-size: 1.0rem;
+                color: #666;
+        }
+        cite {
+                display: block;
+                text-align: right;
+                color: #666;
+                font-size: 1.0rem;
+        }
+}
+
 //Fluidbox fixes
 .lightbox-active {
 	#body {

@@ -11,6 +11,12 @@ images/*
 user/accounts/*
 user/pages
 user/pages/*
+user/plugins
+user/plugins/*
+vendor
+vendor/*
+webserver-configs
+webserver-configs/*
 
 # OS Generated
 .DS_Store*
@@ -18,6 +24,8 @@ ehthumbs.db
 Icon?
 Thumbs.db
 *.swp
+.RData
+.Rhistory
 
 # Jun's..
 *~

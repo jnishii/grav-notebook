@@ -25,8 +25,7 @@ class VideoMedium extends Medium
 
         return [
             'name' => 'video',
-            'handler' => 'html',
-            'text' => '<source src="' . $location . '">Your2 browser does not support the video tag.',
+            'text' => '<source src="' . $location . '">Your browser does not support the video tag.',
             'attributes' => $attributes
         ];
     }
@@ -90,6 +89,40 @@ class VideoMedium extends Medium
             $this->attributes['autoplay'] = true;
         } else {
             unset($this->attributes['autoplay']);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Allows to set the playsinline attribute
+     *
+     * @param bool $status
+     * @return $this
+     */
+    public function playsinline($status = false)
+    {
+        if($status) {
+            $this->attributes['playsinline'] = true;
+        } else {
+            unset($this->attributes['playsinline']);
+        }
+
+        return $this;
+    }
+
+    /**
+     * Allows to set the muted attribute
+     *
+     * @param bool $status
+     * @return $this
+     */
+    public function muted($status = false)
+    {
+        if($status) {
+            $this->attributes['muted'] = true;
+        } else {
+            unset($this->attributes['muted']);
         }
 
         return $this;

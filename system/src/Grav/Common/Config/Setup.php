@@ -137,7 +137,8 @@ class Setup extends Data
 
         // Pre-load setup.php which contains our initial configuration.
         // Configuration may contain dynamic parts, which is why we need to always load it.
-        $file = GRAV_ROOT . '/setup.php';
+        // If "GRAVE_SETUP_PATH" has been defined, use it, otherwise use defaults.
+        $file = defined('GRAV_SETUP_PATH') ? GRAV_SETUP_PATH :  GRAV_ROOT . '/setup.php';
         $setup = is_file($file) ? (array) include $file : [];
 
         // Add default streams defined in beginning of the class.
@@ -261,18 +262,22 @@ class Setup extends Data
             );
         }
 
-        if (!$locator->findResource('environment://config', true)) {
-            // If environment does not have its own directory, remove it from the lookup.
-            $this->set('streams.schemes.environment.prefixes', ['config' => []]);
-            $this->initializeLocator($locator);
-        }
+        try {
+            if (!$locator->findResource('environment://config', true)) {
+                // If environment does not have its own directory, remove it from the lookup.
+                $this->set('streams.schemes.environment.prefixes', ['config' => []]);
+                $this->initializeLocator($locator);
+            }
 
-        // Create security.yaml if it doesn't exist.
-        $filename = $locator->findResource('config://security.yaml', true, true);
-        $file = YamlFile::instance($filename);
-        if (!$file->exists()) {
-            $file->save(['salt' => Utils::generateRandomString(14)]);
-            $file->free();
+            // Create security.yaml if it doesn't exist.
+            $filename = $locator->findResource('config://security.yaml', true, true);
+            $file = YamlFile::instance($filename);
+            if (!$file->exists()) {
+                $file->save(['salt' => Utils::generateRandomString(14)]);
+                $file->free();
+            }
+        } catch (\RuntimeException $e) {
+            throw new \RuntimeException(sprintf('Grav failed to initialize: %s', $e->getMessage()), 500, $e);
         }
     }
 }

@@ -87,6 +87,7 @@ array(
 	- Playbook
 	- Tizen
 - Console
+	- Oculus
 	- Nintendo 3DS
 	- New Nintendo 3DS
 	- Nintendo Wii
@@ -108,10 +109,12 @@ array(
 - Internet Explorer
 - IEMobile
 - Chrome / HeadlessChrome
+- Yandex Browser
 - Opera
 - Midori
 - Vivaldi
 - TizenBrowser
+- OculusBrowser
 - SamsungBrowser
 - UC Browser
 - Lynx
